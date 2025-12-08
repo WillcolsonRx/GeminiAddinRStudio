@@ -1,0 +1,34 @@
+Name: Launch Gemini Assistant
+Description: Open the Gemini AI Assistant in the Viewer pane.
+Binding: launchGeminiAddin
+Interactive: true
+
+Name: Launch Gemini (Background)
+Description: Open Gemini in a background job (non-blocking).
+Binding: launchGeminiBackground
+Interactive: true
+
+Name: Gemini: Explain Selection
+Description: Send selected code to Gemini.
+Binding: sendSelectionToGemini
+Interactive: false
+
+Name: Gemini: Explain Last Error
+Description: Send the last error message to Gemini.
+Binding: sendErrorToGemini
+Interactive: false
+
+Name: Gemini: Auto-Fix Selection
+Description: Automatically fix the selected code in place.
+Binding: autoFixSelection
+Interactive: false
+
+Name: Gemini: Suggest Fix for Error
+Description: Print a fix for the last error to the console.
+Binding: suggestFixForError
+Interactive: false
+
+Name: Gemini: Smart Fix (File & Error)
+Description: Analyze the file and error, then auto-fix the entire script.
+Binding: smartFixFile
+Interactive: false
