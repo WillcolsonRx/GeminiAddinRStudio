@@ -38,17 +38,17 @@ You can install `GeminiAddin` directly from GitHub or via a manual download.
 if (!require("devtools")) install.packages("devtools")
 
 # 2. Install the package
-devtools::install_github("YOUR_USERNAME/GeminiAddin")
+devtools::install_github("YOUR_USERNAME/GeminiAddinRstudio")
 ```
 
 ### Option 2: Offline / Manual Installation
 
-If you have downloaded the `GeminiAddin_0.1.0.tar.gz` file:
+If you have downloaded the `GeminiAddinRstudio_0.1.0.tar.gz` file:
 
 1.  Open RStudio.
 2.  Run:
     ```r
-    install.packages("path/to/GeminiAddin_0.1.0.tar.gz", repos = NULL, type = "source")
+    install.packages("path/to/GeminiAddinRstudio_0.1.0.tar.gz", repos = NULL, type = "source")
     ```
 
 ---
