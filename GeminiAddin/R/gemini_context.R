@@ -75,7 +75,7 @@ autoFixSelection <- function() {
   prompt <- paste("Fix the following R code. Return ONLY the fixed code, no markdown formatting, no explanations.\n\nCode:\n", selection)
   
   fixed_code <- tryCatch({
-    call_gemini(prompt, api_key, model = "gemini-2.0-flash")
+    call_gemini(prompt, api_key)
   }, error = function(e) {
     message("Error calling Gemini: ", e$message)
     return(NULL)
@@ -114,7 +114,7 @@ suggestFixForError <- function() {
   prompt <- paste("The following R error occurred:\n", error_msg, "\n\nSuggest a fix or explain what went wrong. Be concise.")
   
   suggestion <- tryCatch({
-    call_gemini(prompt, api_key, model = "gemini-2.0-flash")
+    call_gemini(prompt, api_key)
   }, error = function(e) {
     message("Error calling Gemini: ", e$message)
     return(NULL)
@@ -161,7 +161,7 @@ smartFixFile <- function() {
   )
   
   fixed_code <- tryCatch({
-    call_gemini(prompt, api_key, model = "gemini-2.0-flash")
+    call_gemini(prompt, api_key)
   }, error = function(e) {
     message("Error calling Gemini: ", e$message)
     return(NULL)

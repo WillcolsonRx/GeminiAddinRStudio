@@ -8,7 +8,7 @@
 
 > **Your AI Pair Programmer, directly inside RStudio.**
 
-Integrate the power of Google's **Gemini 2.0** directly into your R coding workflow. No more switching tabs to ChatGPT or Google. Get explanations, fix bugs, and write code without ever leaving the IDE.
+Integrate the power of Google's **Gemini API** directly into your R coding workflow. No more switching tabs to ChatGPT or Google. Get explanations, fix bugs, and write code without ever leaving the IDE.
 
 ---
 
@@ -38,17 +38,17 @@ You can install `GeminiAddin` directly from GitHub or via a manual download.
 if (!require("devtools")) install.packages("devtools")
 
 # 2. Install the package
-devtools::install_github("YOUR_USERNAME/GeminiAddin")
+devtools::install_github("WillcolsonRx/GeminiAddinRstudio", subdir = "GeminiAddin")
 ```
 
 ### Option 2: Offline / Manual Installation
 
-If you have downloaded the `GeminiAddin_0.1.0.tar.gz` file:
+If you have downloaded the `GeminiAddin_0.1.2.tar.gz` file:
 
 1.  Open RStudio.
 2.  Run:
     ```r
-    install.packages("path/to/GeminiAddin_0.1.0.tar.gz", repos = NULL, type = "source")
+    install.packages("path/to/GeminiAddin_0.1.2.tar.gz", repos = NULL, type = "source")
     ```
 
 ---
@@ -64,6 +64,14 @@ Run this command in your R console to set your key (persists for the session):
 ```r
 Sys.setenv(GEMINI_API_KEY = "AIzaSy...")
 ```
+
+By default, the addin now uses `gemini-2.5-flash-lite`, which is the most quota-friendly stable Gemini 2.5 text model for free-tier usage. If you want to override that, you can also set:
+
+```r
+Sys.setenv(GEMINI_MODEL = "gemini-2.5-flash-lite")
+```
+
+If you want slightly stronger quality and your quota allows it, switch to `gemini-2.5-flash`. If you have paid quota and want the strongest reasoning model, use `gemini-2.5-pro`.
 
 **Recommended:** To make it permanent, add it to your `.Renviron` file:
 1.  Run `usethis::edit_r_environ()`

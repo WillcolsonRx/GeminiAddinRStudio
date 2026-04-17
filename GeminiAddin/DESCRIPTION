@@ -1,7 +1,7 @@
 Package: GeminiAddin
 Type: Package
 Title: Gemini AI Assistant for RStudio
-Version: 0.1.0
+Version: 0.1.2
 Author: Antigravity
 Maintainer: User <user@example.com>
 Description: An RStudio Addin that provides a GUI for Google's Gemini API.

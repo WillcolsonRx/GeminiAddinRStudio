@@ -21,7 +21,7 @@ gemini_ui <- function() {
       ),
       shiny::fillCol(
         flex = c(NA, NA, 1, NA, 3),
-        shiny::textInput("model", "Model:", value = "gemini-2.0-flash", width = "100%"),
+        shiny::textInput("model", "Model:", value = get_default_gemini_model(), width = "100%"),
         shiny::textAreaInput("prompt", "Ask Gemini:", width = "100%", rows = 3),
         shiny::actionButton("send", "Send to Gemini", icon = shiny::icon("paper-plane"), class = "btn-primary", width = "100%"),
         shiny::h4("Response:"),
